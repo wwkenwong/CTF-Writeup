@@ -38,3 +38,5 @@ http://blog.csdn.net/qq_20307987/article/details/51303824
 http://brandon-hy-lin.blogspot.hk/2015/12/shared-library-plt-got.html
 
 https://gist.github.com/ihciah/0ca68da3e32e38818bb9
+
+http://jing0107.lofter.com/post/1cbc869f_8b3d8a5
