@@ -50,3 +50,11 @@ root@kali:~/Documents/CTF# ROPgadget --binary r0pbaby > log.txt
 
 root@kali:~/Documents/CTF# cat log.txt |grep pop
 
+
+Reference:
+
+https://blog.skullsecurity.org/2015/defcon-quals-r0pbaby-simple-64-bit-rop
+
+http://qiita.com/MarshMallow_sh/items/87019f038e4f5dc82451
+
+https://github.com/smokeleeteveryday/CTF_WRITEUPS/tree/master/2015/DEFCONCTF/babysfirst/r0pbaby
