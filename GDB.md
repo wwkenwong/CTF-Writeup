@@ -40,3 +40,5 @@ OFFSET   TYPE              VALUE
 
 
 radare2->i check canary
+
+check x/x $rbp and $rbp+4/+8
