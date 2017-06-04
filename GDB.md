@@ -39,4 +39,4 @@ OFFSET   TYPE              VALUE
 0804a014 R_386_JUMP_SLOT   setresgid
 
 
-
+radare2->i check canary
