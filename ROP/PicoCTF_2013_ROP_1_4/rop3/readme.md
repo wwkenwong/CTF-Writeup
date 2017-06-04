@@ -24,3 +24,7 @@ exploit with A*140+Sys+AAAA+'bin/sh'
 
 
 Reference= https://github.com/ctfs/write-ups-2013/tree/master/pico-ctf-2013/rop-3
+
+
+btw The fake return address can be anything, so I chose "\x00"*4 (remember an address is 4 bytes).
+
