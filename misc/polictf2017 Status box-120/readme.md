@@ -21,7 +21,7 @@ nc statusbox.chall.polictf.it 31337
 
 呢條其實唔難,只要有睇題目 -_-
 
-首先nc去個
+首先nc去個server
 
 ```
 StatusBox started! This Box memorizes a statuses
@@ -48,7 +48,7 @@ Your choice was:
 ````
 
 
-仲唔係heap overflow format  收工
+仲唔係heap overflow format  收工 ╮(╯_╰)╭
 
 wait!!冇binary 冇fmt 冇野漏address 仲要係公廁題
 
@@ -79,7 +79,7 @@ Choose your action:
 
 ```
 
-之後發現原來modify,直接禁enter可以delete....
+之後發現原來modify,直接禁enter可以delete....  ( ˘•ω•˘ )
 
 ```
 Choose your action:
@@ -104,5 +104,37 @@ Choose your action:
 
 ```
 
+之後練下寫(抄)script.......
 
 
+free 14 次之後就係flag:
+```
+14
+
+Your choice was: 0
+CURRENT STATUS:
+flag{g00d_0ld_m1ss1ng_ch3cks!}
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+
+
+Your choice was: 3
+Insert the new status, it will modify the current one:
+
+You set the current state to empty, so it was deleted.
+Going back to the previous state.
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+
+```
+呢個故事教訓大家要睇題目   
+
+人地一早講左"It already contains a small sequence of statuses, but you can show only the current one."
