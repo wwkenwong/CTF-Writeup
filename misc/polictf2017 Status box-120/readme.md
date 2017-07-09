@@ -19,7 +19,9 @@ nc statusbox.chall.polictf.it 31337
 ```
 
 
-呢條其實唔難,如果有睇題目 -_-
+呢條其實唔難,只要有睇題目 -_-
+
+首先nc去個
 
 ```
 StatusBox started! This Box memorizes a statuses
@@ -44,5 +46,63 @@ Choose your action:
 
 Your choice was: 
 ````
+
+
+仲唔係heap overflow format  收工
+
+wait!!冇binary 冇fmt 冇野漏address 仲要係公廁題
+
+首先new左200個status冇反應
+
+向下delete status
+
+```
+Your choice was: 0
+CURRENT STATUS:
+This is the first status
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+2
+
+Your choice was: 2
+You cannot delete more statuses.
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+
+```
+
+之後發現原來modify,直接禁enter可以delete....
+
+```
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+3
+
+Your choice was: 3
+Insert the new status, it will modify the current one:
+
+You set the current state to empty, so it was deleted.
+Going back to the previous state.
+Choose your action:
+0 - Print the current status;
+1 - Set a new current status;
+2 - Delete the current status and go back to the previous one;
+3 - Modify the current status.
+4 - Exit (statuses will be lost.)
+
+```
+
 
 
