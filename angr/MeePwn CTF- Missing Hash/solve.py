@@ -20,7 +20,10 @@ state.memory.store(bind_addr, input_string)
  
 # Attempt to find a path
 path = proj.factory.path(state=state)
-ex = proj.surveyors.Explorer(start=path, find=0x401B21, avoid=0x00401B1)
+#ex = proj.surveyors.Explorer(start=path, find=0x401B21, avoid=0x00401B1)
+
+ex = proj.surveyors.Explorer(start=path, find=0x401B21, avoid=0x00401B13)
+
 ex.run()
  
 state = ex.found[0].state
