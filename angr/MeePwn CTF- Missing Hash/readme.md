@@ -97,6 +97,9 @@ scanf("%10s", a__________);
 開始搵address
 
 avoid(red) and target(green)
+
+(原作者係avoid=0x00401B1,不過比較慢所以選擇左0x00401B13)
+
 ![alt text](2.png)
 
 
@@ -109,14 +112,22 @@ bind_addr = 0x040305A
 ```
 ![alt text](4.png)
 
+
+
 Overview of start point:
+
+
+
 ![alt text](5.png)
 
 
 
 我地比賽個陣揀左0x00401A9C做起點,run到第二朝vm都hang左
 
-base on一條抄返黎嘅script放0x00401A9C做起點
+![alt text](6.png)
+
+
+base on抄返黎嘅script放0x00401A9C做起點
 
 Error message:
 ```python
