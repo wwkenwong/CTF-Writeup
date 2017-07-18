@@ -4,6 +4,8 @@
 
 ![alt text](1.png)
 
+Symbolic Execution!!!
+
 F5一下先:
 
 ```C++
@@ -92,11 +94,27 @@ scanf("%10s", a__________);
 ```
 兩個constraint get
 
-
 開始搵address
 
+avoid(red) and target(green)
+![alt text](2.png)
 
-我地比窶賽個陣揀左0x00401A9C做起點,到第二朝vm都hang左
+
+start point(double click the blue circle can go to memory address region):
+![alt text](3.png)
+
+```python
+# scanf() reads from stdin and stores it a this address
+bind_addr = 0x040305A
+```
+![alt text](4.png)
+
+Overview of start point:
+![alt text](5.png)
+
+
+
+我地比賽個陣揀左0x00401A9C做起點,run到第二朝vm都hang左
 
 base on一條抄返黎嘅script放0x00401A9C做起點
 
