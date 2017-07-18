@@ -94,7 +94,13 @@ scanf("%10s", a__________);
 ```
 兩個constraint get
 
+
+
+
+
 開始搵address
+
+
 
 avoid(red) and target(green)
 
@@ -177,6 +183,10 @@ for i in range(18):
 ```
 
 因為execution path簡單,所以有冇入constraint都得:0)
+
+
+
+
 
 
 Reference
