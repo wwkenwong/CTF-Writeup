@@ -2,6 +2,7 @@
 ===================
 首先gen個CFG望下:
 
+![alt text](1.png)
 
 F5一下先:
 
@@ -91,9 +92,23 @@ scanf("%10s", a__________);
 ```
 兩個constraint get
 
+
 開始搵address
 
 
+我地比窶賽個陣揀左0x00401A9C做起點,到第二朝vm都hang左
+
+base on一條抄返黎嘅script放0x00401A9C做起點
+
+Error message:
+```python
+Traceback (most recent call last):
+  File "whoareyou_.py", line 23, in <module>
+    state = ex.found[0].state
+IndexError: list index out of range
+
+```
+可以假設呢類error係因為過左input point引致
 
 Reference
 =============================
