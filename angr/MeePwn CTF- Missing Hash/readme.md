@@ -3,8 +3,6 @@
 首先gen個CFG望下:
 
 
-
-
 F5一下先:
 
 ```C++
@@ -65,10 +63,15 @@ int sub_401588()
 
 ```
 
+係呢行,我地知道條flag要pre-gen出黎先pass到之後嘅checking
+
 ```C++
 word_403010 += sub_401500(a__________, &unk_403022, 3);
 ```
-係呢行,我地知道條flag要出黎gen先pass到之後嘅checking
+Flag length=10
+```c++
+scanf("%10s", a__________);
+```
 
 望下下面
 
@@ -87,6 +90,9 @@ word_403010 += sub_401500(a__________, &unk_403022, 3);
 
 ```
 兩個constraint get
+
+開始搵address
+
 
 
 Reference
