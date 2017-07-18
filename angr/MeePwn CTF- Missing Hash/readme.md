@@ -139,6 +139,46 @@ IndexError: list index out of range
 ```
 可以假設呢類error係因為過左input point引致
 
+
+
+
+Script Remarks:
+===========================
+
+initialize 一個 char input_string[10]  
+```python
+input_string = state.se.BVS("input_string", 8 * 10)
+```
+
+Constraint to printable string:
+
+```python
+for byte in input_string.chop(8):
+
+	state.add_constraints(byte >= ' ') # '\x20'
+	state.add_constraints(byte <= '~') # '\x7e'
+	state.add_constraints(byte != 0) # null
+```
+
+Pass input string 去個個a______ :
+
+```python
+state.memory.store(bind_addr, input_string)
+```
+
+Constuct a_____ by adding constraint of a_____[0] and a______[9]
+
+```python
+for i in range(18):
+	state.add_constraints(state.memory.load(0x408040 + i, 1) == 0)
+# We know the flag starts with "Z" and ends with "!"
+	state.add_constraints(state.memory.load(bind_addr + 9, 1) == '!')
+	state.add_constraints(state.memory.load(bind_addr, 1) == 'Z')
+```
+
+因為execution path簡單,所以有冇入constraint都得:0)
+
+
 Reference
 =============================
 [[MeePwn CTF] Missing Hash write up](https://develbranch.com/ctf/meepwn-ctf-missing-hash-write-up.html)
