@@ -6,7 +6,38 @@
 直接拎左個binary黎玩
 
 
+![alt text](1.png)
 
+
+address
+
+![alt text](2.png)
+
+
+呢條其實唔難either z3 or angr
+
+要注意一個點就係
+
+```python
+#By default there's only 60 symbolic bytes, which is too small for this case
+#This region is tunable in case of any out bound error found
+state.libc.buf_symbolic_bytes=str__len +1
+#state.libc.buf_symbolic_bytes = 500
+```
+
+自己打完一次,都卡呢個位
+
+
+
+由於pass argv係command line執行,所以要用
+
+```python
+#use claripy if is argv type passing
+input_string = angr.claripy.BVS("input_string", 8 * str__len)
+
+state = proj.factory.entry_state(args=["./unbreakable-enterprise-product-activation", input_string], add_options={simuvex.o.LAZY_SOLVES})
+
+```
 
 
 
