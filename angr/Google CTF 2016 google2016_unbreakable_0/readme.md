@@ -5,6 +5,8 @@
 
 直接拎左個binary黎玩
 
+string length=0x43
+
 
 ![alt text](1.png)
 
