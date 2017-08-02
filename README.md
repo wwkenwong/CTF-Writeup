@@ -1,5 +1,8 @@
 # CTF-Writeup
 
+asm code writer https://defuse.ca/online-x86-assembler.htm
+
+
 https://pastebin.com/uyifxgPu
 
 
