@@ -31,3 +31,9 @@ http://skysider.com/?p=458
 http://shayi1983.blog.51cto.com/4681835/1613615
 
 https://github.com/Shenjiaqi/RE-for-beginners
+
+长亭技术专栏   https://zhuanlan.zhihu.com/chaitin-tech
+
+Linux (x86) Exploit Development Series   https://sploitfun.wordpress.com/2015/
+
+http://staff.ustc.edu.cn/~sycheng/ssat/
