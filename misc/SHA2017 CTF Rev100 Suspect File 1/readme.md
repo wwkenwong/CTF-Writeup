@@ -22,20 +22,23 @@
 F5 code 
 
 ```C++
-
-
+.........
+}
+  while ( v10 != -915395067 );
+  puts("Yes!");
+  return 0;
+}
 
 
 ```
+由於冇scanf,估計要pass一個argv令v10==-915395067
 
-估計要pass一個argv令佢==
 
-
-gdb再係sorry set breakpoint
+gdb係sorry() set breakpoint
 
 ![alt text](1.png)
 
-call sorry之前嘅stack
+call sorry()之前嘅stack
 
 ![alt text](2.png)
 
@@ -45,6 +48,9 @@ pass左一個事實落去做argv
 
 唔小心汁走左支flag ^_^
 
+![alt text](4.png)
+
 七瀨大法好
 
-![alt text](4.png)
+![alt text](nanase.png)
+
