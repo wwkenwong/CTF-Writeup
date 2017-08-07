@@ -84,3 +84,4 @@ for i in range(20):
 
 2.Bitvec is for register ~~~~~~
 
+3.留意divison zero,如果唔係有可能 multiple solution  慘
