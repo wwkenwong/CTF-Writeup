@@ -11,7 +11,7 @@
 
 # Writeup
 
-第一次寫writeup,呢條只係sanity check,然而我用左個1鐘頭寫同debug angr script,再用左個半鐘頭 update angr :0)
+第一次寫writeup,呢條只係sanity check,然而我用左1個鐘頭寫同debug angr script,再用左個半鐘頭 update angr :0)
 
 首先Ida 左佢先
 
