@@ -20,6 +20,7 @@
 見到都反胃x_x
 
 F5 code 
+Conditions for output "Yes!"
 
 ```C++
 .........
@@ -53,4 +54,8 @@ pass左一個事實落去做argv
 七瀨大法好
 
 ![alt text](nanase.png)
+
+估計係因為中間太多while,所以angr爆炸,估計要z3解先得
+
+唉 終於解到題~~~~~~~
 
