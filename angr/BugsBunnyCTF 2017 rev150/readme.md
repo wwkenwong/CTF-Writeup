@@ -1,5 +1,9 @@
 # BugsBunnyCTF 2017 rev150
 
+呢題其實唔難,不過可能有太多io,所以angr解唔到
+
+Ida Code:
+
 ```C++
 
   {
@@ -35,12 +39,9 @@
     
 ```
 
+支flag要satisfy呢n個 check statement 
 
-
-
-
-
-
+當然就z3見
 
 ```
 sat
@@ -65,5 +66,19 @@ sat
  h = 4,
  m = 3]
 ```
-
 flag:BugsBunny{42813724579039578812}
+
+
+# Remark
+
+1.睇其他writeup先發現可以咁入constraint ....
+
+```python
+for i in range(20):
+	
+	s.append(Int('s['+str(i)+']')) 
+
+```
+
+2.Bitvec is for register ~~~~~~
+
