@@ -12,15 +12,23 @@
 
 首先用ida搵 canary address:
 
+
 ![alt text](1.png)
 
 
-數到第135號位save左 canary
+
+用stack dump數到第135號位save左 canary,71號位開始save printf of decrypted message
+
+
+
 ![alt text](2.png)
 
 
 
-由於係提供所以可以利用再寫去揾搵返
+由於提供libc同冇aslr,所以可以利用GOT再寫printf去71號位,揾libc offset,再搵返system server side address:
+
+
+
 ![alt text](3.png)
 
 
