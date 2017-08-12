@@ -35,7 +35,7 @@ Reverse
 
 3.IDA Pro http://skysider.com/?p=458
 
-4. http://shayi1983.blog.51cto.com/4681835/1613615
+4.http://shayi1983.blog.51cto.com/4681835/1613615
 
 5.RE-for-beginners https://github.com/dennis714/RE-for-beginners
 
@@ -49,11 +49,13 @@ Infrastructure
 
 
 CTF field guide
-https://trailofbits.github.io/ctf/tradecraft/README.html
+==================
 
-http://www.shiyanbar.com/ctf/practice
+1.https://trailofbits.github.io/ctf/tradecraft/
 
-https://trailofbits.github.io/ctf/intro/find.html
+2.http://www.shiyanbar.com/ctf/practice
+
+3.https://trailofbits.github.io/ctf/intro/find.html
 
 
 
