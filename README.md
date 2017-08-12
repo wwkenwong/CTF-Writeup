@@ -43,12 +43,15 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 11.BROP http://www.scs.stanford.edu/brop/bittau-brop.pdf
 
-12.SROP http://30cm.tw/?p=893
+12.SROP http://30cm.tw/?p=893  http://www.freebuf.com/articles/network/87447.html
 
 13.Hitcon 2016 Pwn赛题学习 www.cnblogs.com/Ox9A82/p/6766261.html
 
 13.muhe http://o0xmuhe.me/
 
+14.http://binja.github.io/2015/05/19/defconctf2015-fuckup-writeup/
+
+15.binja paste bin https://pastebin.com/u/bata_24
 
 Reverse
 ======================
