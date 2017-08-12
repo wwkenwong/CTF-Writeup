@@ -53,7 +53,7 @@ printf_addr=int(r.recv(1024).split('--')[-1][:4][::-1].encode('hex'),16)
 係stack dump一眼就見到139號位有個近似stack address嘅物體
 
 
-於是用local 139 save個個address 減返canary($ebp-0x1c)
+於是用local 139 save個個address 減返canary address ($ebp-0x1c)
 
 得到 0x34
 
