@@ -11,6 +11,10 @@ x86-X64
 
 2.syscall table   https://w3challs.com/syscalls/?arch=x86
 
+3.GDB Command list http://csapp.cs.cmu.edu/3e/docs/gdbnotes-x86-64.pdf
+
+4.http://www.opensecuritytraining.info/IntroX86.html
+
 
 PWN
 ======================
@@ -24,6 +28,12 @@ PWN
 4.软件安全与测试  http://staff.ustc.edu.cn/~sycheng/ssat/
 
 5.うさぎ小屋 https://kimiyuki.net/
+
+6.Modern Binary Exploitation by RPISEC https://github.com/RPISEC/MBE
+http://security.cs.rpi.edu/courses/binexp-spring2015/
+
+
+
 
 
 Reverse
@@ -56,6 +66,16 @@ CTF field guide
 2.http://www.shiyanbar.com/ctf/practice
 
 3.https://trailofbits.github.io/ctf/intro/find.html
+
+
+Online Course Materials
+========================
+
+1.CS155 Computer and Network Security  https://crypto.stanford.edu/cs155old/cs155-spring16/syllabus.html
+
+2.utdallas CTF team https://csg.utdallas.edu/presentations/
+
+3.CIS 4930/6930, Fall 2016 Systems Security www.cse.usf.edu/~xou/sec16/
 
 
 
