@@ -1,13 +1,21 @@
 # CTF-Writeup
 
-asm code writer https://defuse.ca/online-x86-assembler.htm
+
+# Link
+
+x86-X64
+======================
+
+1.asm code writer https://defuse.ca/online-x86-assembler.htm
+
+2.syscall table   https://w3challs.com/syscalls/?arch=x86
+
+
 
 
 https://pastebin.com/uyifxgPu
 
 
-sys call
-https://w3challs.com/syscalls/?arch=x86
 
 
 CTF field guide
