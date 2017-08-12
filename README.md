@@ -32,6 +32,8 @@ PWN
 6.Modern Binary Exploitation by RPISEC https://github.com/RPISEC/MBE
 http://security.cs.rpi.edu/courses/binexp-spring2015/
 
+7.【技术分享】现代化的堆相关漏洞利用技巧 http://bobao.360.cn/learning/detail/3197.html
+
 
 
 
@@ -48,6 +50,8 @@ Reverse
 4.http://shayi1983.blog.51cto.com/4681835/1613615
 
 5.RE-for-beginners https://github.com/dennis714/RE-for-beginners
+
+6.A binary analysis, count me if you can shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/
 
 
 Infrastructure
@@ -67,6 +71,8 @@ CTF field guide
 
 3.https://trailofbits.github.io/ctf/intro/find.html
 
+4.https://ctf-wiki.github.io/ctf-wiki/#/introduction/history
+
 
 Online Course Materials
 ========================
@@ -77,7 +83,7 @@ Online Course Materials
 
 3.CIS 4930/6930, Fall 2016 Systems Security www.cse.usf.edu/~xou/sec16/
 
-
+4.CS 6V81--005: System Security and Binary Code Analysis https://www.utdallas.edu/~zxl111930/spring2012.html
 
 
 
