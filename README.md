@@ -53,6 +53,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 15.binja paste bin https://pastebin.com/u/bata_24
 
+16.http://look3little.blogspot.hk/
+
 Reverse
 ======================
 
