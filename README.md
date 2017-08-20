@@ -117,3 +117,5 @@ Online Course Materials
 10.Offensive Computer Security https://www.cs.fsu.edu/~redwood/OffensiveComputerSecurity/lectures.html
 
 11.https://doc.lagout.org/security/
+
+12.https://cryptopals.com/
