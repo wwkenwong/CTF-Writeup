@@ -7,6 +7,7 @@
 >Hint: no hint
 >
 >[bof2](bof2)
+>
 >[libc.so.6](libc.so.6)
 
 呢題寫parsing addr 個script有d難, 其他都只係基本ROP
@@ -123,6 +124,26 @@ follow呢個思路,個exploit其實好簡單...
 
 再用function 2 overwrite strchr,再用function 2 係position 0 input /bin/sh\x00 
 
-佢一call strchr個刻就execute system("/bin/sh\x00") get shell (•‿•)
+佢call strchr個刻就execute system("/bin/sh\x00") get shell (•‿•)
 
 [solve.py](solve.py)
+
+# One time RCE Gadget
+
+至於one time rce gadget,其實係源於Dragon Sector [Dragons’ notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
+
+佢裏面講到libc裏面有mov rdi,/bin/sh   call exceve 嘅 code segment
+
+用IDA check libc:
+```asm
+```
+
+真係有呢段code, 不過係呢題用唔到,因為行到去exceve個陣; rsi,rdi唔滿足call exceve嘅要求
+
+再係gdb強制將rsi rdx set 0,可以彈到shell,不過即刻exit (´-ω-`)
+
+相信call one time gadget之前要call一個 xor_rsi_rxi_.........嘅gadget,再call rce gadget and get shell
+
+希望遲d可以玩下呢個payload (｀▽´)
+
+
