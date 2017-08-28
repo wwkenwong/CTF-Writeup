@@ -55,6 +55,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 16.http://look3little.blogspot.hk/
 
+17.LC BC http://mslc.ctf.su/
+
+
 Reverse
 ======================
 
@@ -71,6 +74,8 @@ Reverse
 6.A binary analysis, count me if you can shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/
 
 7.Reversing material http://repository.root-me.org/Reverse%20Engineering/
+
+8.https://www.52pojie.cn/thread-40995-1-1.html
 
 
 Infrastructure
