@@ -5,13 +5,12 @@ Question:
 >Simple REVERSE
 >Very simple!Just brute-force it!
 >
->rev
+>[rev](rev)
 
 
 首先ida左佢
 
-```
-C++
+```C++
   scanf("%39s", &s, envp);
   if ( strlen(&s) > 0x26
     && v16 + 2 * s + 8 * v42 == 954
