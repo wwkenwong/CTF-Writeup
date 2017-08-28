@@ -23,6 +23,6 @@
 
 等大約個半鐘就有flag
 
-#Code:
+# Code:
 
 [solve.py](solve.py)
