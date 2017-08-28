@@ -19,7 +19,7 @@
 2.每中一隻字,會roughly 多0.5秒sleeping time
 
 
-經過出題人少少提示,我發現原來pwntools有計latency嘅tools,經過幾次trial and error就開始同server interactive
+經過出題人少少提示,我發現原來pwntools有計latency嘅tools,經過幾次trial and error就開始send server 
 
 等大約個半鐘就有flag
 
