@@ -17,8 +17,7 @@
 首先ida左佢,
 
 
-```
-C++
+```C++
 
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
@@ -32,8 +31,8 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 
 有個vulnerable_function():
 
-```
-C++
+```C++
+
 ssize_t vulnerable_function()
 {
   char buf; // [sp+0h] [bp-80h]@1
@@ -47,8 +46,8 @@ read buf 有bof
 
 Function list 有一個not_called()
 
-```
-C++
+```C++
+
 int not_called()
 {
   return system("/bin/bash");
