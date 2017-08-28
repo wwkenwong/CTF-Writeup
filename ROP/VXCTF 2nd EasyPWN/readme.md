@@ -6,7 +6,7 @@
 >EasyPWN1
 >Easiest pwn in the world!
 >
->bof(bof)
+>[bof](bof)
 
 
 
@@ -55,4 +55,9 @@ int not_called()
 ```
 
 只要將ret addr 指向呢個function 就get shell
+
+# Solution:
+
+[solve.py](solve.py)
+
 
