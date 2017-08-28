@@ -81,7 +81,6 @@ int __cdecl __noreturn main(int argc, const char **argv, const char **envp)
 望一望個data段,可以利用輸入負數,leak到一堆got table addr,再利用libc 求libc base,再加返去system或者指去任意libc code
 
 ```
-
 .got.plt:0000000000601018 off_601018      dq offset putchar       ; DATA XREF: _putcharr
 .got.plt:0000000000601020 off_601020      dq offset write         ; DATA XREF: _writer
 .got.plt:0000000000601028 off_601028      dq offset setresgid     ; DATA XREF: _setresgidr
@@ -136,6 +135,15 @@ follow呢個思路,個exploit其實好簡單...
 
 用IDA check libc:
 ```asm
+.text:000000000004647C                 mov     rax, cs:environ_ptr_0
+.text:0000000000046483                 lea     rdi, aBinSh     ; "/bin/sh"
+.text:000000000004648A                 lea     rsi, [rsp+180h+var_150]
+.text:000000000004648F                 mov     cs:dword_3C46C0, 0
+.text:0000000000046499                 mov     cs:dword_3C46D0, 0
+.text:00000000000464A3                 mov     rdx, [rax]
+.text:00000000000464A6                 call    execve
+.text:00000000000464AB                 mov     edi, 7Fh        ; status
+.text:00000000000464B0                 call    _exit
 ```
 
 真係有呢段code, 不過係呢題用唔到,因為行到去exceve個陣; rsi,rdi唔滿足call exceve嘅要求
