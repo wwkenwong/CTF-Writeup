@@ -103,7 +103,7 @@ int __cdecl __noreturn main(int argc, const char **argv, const char **envp)
 
 1.執行system("/bin/sh")
 
-2.ONe time RCE Gadget
+2.one time RCE Gadget
 
 首先就講左work個個solution先.
 
@@ -111,5 +111,18 @@ int __cdecl __noreturn main(int argc, const char **argv, const char **envp)
 
 所以目標好簡單,就係要做一個類似 pop_rdi_ret+/bin/sh\x00+system_addr 嘅 payload
 
-不過由於冇bof,所以只可以GOT hijacking之後ret2libc
+不過由於冇bof,所以只可以GOT hijacking之後再ret2libc
 
+咁我地可以hijack邊個function,其實只有一個:_strchr
+
+因為其他function係原本嘅call之前都做左mov rdi,0 呢個動作 (´･ω･`)
+
+follow呢個思路,個exploit其實好簡單...
+
+寫好個addr parser, nc之後揀1,leak 1個已經call左嘅function eg.scanf, 用提供嘅libc計libc base
+
+再用function 2 overwrite strchr,再用function 2 係position 0 input /bin/sh\x00 
+
+佢一call strchr個刻就execute system("/bin/sh\x00") get shell (•‿•)
+
+[solve.py](solve.py)
