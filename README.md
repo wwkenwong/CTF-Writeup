@@ -61,6 +61,10 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 19.Return-to-dl-resolve http://pwn4.fun/2016/11/09/Return-to-dl-resolve/ http://rk700.github.io/2015/08/09/return-to-dl-resolve/ http://www.reversing.win/2017/08/29/%E4%BA%8C%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-ret2resolve/
 
+20.k0shl https://whereisk0shl.top/
+
+21.https://david942j.blogspot.hk/
+
 Reverse
 ======================
 
