@@ -65,6 +65,12 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 21.https://david942j.blogspot.hk/
 
+22.【技术分享】现代栈溢出利用技术基础：ROP http://bobao.360.cn/learning/detail/3694.html
+
+23.File Stream Pointer Overflow http://w0lfzhang.me/2016/11/19/File-Stream-Pointer-Overflow/  http://drops.xmd5.com/static/drops/binary-12740.html
+
+24. Some universal gadget sequence for Linux x86_64 ROP payload  http://v0ids3curity.blogspot.hk/2013/07/some-gadget-sequence-for-x8664-rop.html  http://spd.dropsec.xyz/2017/02/21/%E5%AF%BB%E6%89%BEGadgets%E5%8F%8A%E9%80%9A%E7%94%A8Gadgets/  http://blog.csdn.net/SmalOSnail/article/details/53573061
+
 Reverse
 ======================
 
@@ -131,3 +137,5 @@ Online Course Materials
 11.https://doc.lagout.org/security/
 
 12.https://cryptopals.com/
+
+13.【CTF 攻略】CTF比赛中关于zip的总结  http://bobao.360.cn/ctf/learning/203.html
