@@ -59,7 +59,7 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 18.https://raintrees.net/projects/a-painter-and-a-black-cat/wiki/CTF_Pwn
 
-19.Return-to-dl-resolve http://pwn4.fun/2016/11/09/Return-to-dl-resolve/ http://rk700.github.io/2015/08/09/return-to-dl-resolve/ http://www.reversing.win/2017/08/29/%E4%BA%8C%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-ret2resolve/
+19.Return-to-dl-resolve http://pwn4.fun/2016/11/09/Return-to-dl-resolve/ http://rk700.github.io/2015/08/09/return-to-dl-resolve/ http://www.reversing.win/2017/08/29/%E4%BA%8C%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-ret2resolve/  http://inaz2.hatenablog.com/entry/2014/07/27/205322
 
 20.k0shl https://whereisk0shl.top/
 
@@ -70,6 +70,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 23.File Stream Pointer Overflow http://w0lfzhang.me/2016/11/19/File-Stream-Pointer-Overflow/  http://drops.xmd5.com/static/drops/binary-12740.html
 
 24. Some universal gadget sequence for Linux x86_64 ROP payload  http://v0ids3curity.blogspot.hk/2013/07/some-gadget-sequence-for-x8664-rop.html  http://spd.dropsec.xyz/2017/02/21/%E5%AF%BB%E6%89%BEGadgets%E5%8F%8A%E9%80%9A%E7%94%A8Gadgets/  http://blog.csdn.net/SmalOSnail/article/details/53573061
+
+25.Can We Prevent Use-after-free Attacks?   http://inaz2.hatenablog.com/entry/2017/06/05/005321
+
 
 Reverse
 ======================
