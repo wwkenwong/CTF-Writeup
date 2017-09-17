@@ -73,6 +73,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 25.Can We Prevent Use-after-free Attacks?   http://inaz2.hatenablog.com/entry/2017/06/05/005321
 
+26.http://brieflyx.me/
+
 
 Reverse
 ======================
