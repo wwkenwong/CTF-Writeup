@@ -11,7 +11,7 @@
 
 呢題係今次嘅嘅sanity check, 其實唔難
 
-IDA Pro
+IDA Pro main:
 
 ```C++
   s[strlen(s) - 1] = 0;
@@ -26,8 +26,9 @@ IDA Pro
       result = 0;
     }
 ```
+題目就係入支flag落去,做transformation, 再同正確嘅flag transformation 對比 
 
-get_tbl_entry:
+transformation function:
 
 ```C++
 __int64 __fastcall get_tbl_entry(char a1)
@@ -43,6 +44,11 @@ __int64 __fastcall get_tbl_entry(char a1)
 }
 ```
 
+算法好簡單,只要將個byte table dump 出黎 就完成左part 1
+
+之後係之前set breakpoint (0x9F7), 抄埋 rcx  (正確嘅flag transformation )
+
+strncmp assmebly:
 
 ```asm
 .text:00000000000009DE loc_9DE:                                ; CODE XREF: main+129j
@@ -60,6 +66,10 @@ __int64 __fastcall get_tbl_entry(char a1)
 .text:0000000000000A11                 jmp     short loc_A24
 ```
 
+有table+result之後,再python implement 1次佢個transfomation algorithm就可以
+
+
+由於作者唔識打code同睇assembly,所以就求其打左個basic search,再返gdb人手check transformation result ~_~
 
 
 
