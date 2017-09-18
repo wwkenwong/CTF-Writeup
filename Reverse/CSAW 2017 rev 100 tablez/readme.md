@@ -69,7 +69,7 @@ strncmp assmebly:
 有table+result之後,再python implement 1次佢個transfomation algorithm就可以
 
 
-由於作者唔識打code同睇assembly,所以就求其打左個basic search,再返gdb人手check transformation result   ~_~
+由於作者唔識打code同睇assembly,所以就求其打左個basic search,再返gdb人手check transformation result 
 
 
 ```
