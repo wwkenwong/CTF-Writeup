@@ -12,6 +12,14 @@
 
 呢題係google題,只要你中一個shellcode, 就get flag
 
+``pyrhon
+    Arch:     amd64-64-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX disabled
+    PIE:      No PIE (0x400000)
+```
+
 IO dump:
 
 ```
@@ -35,5 +43,6 @@ stack dump
 
 
 ```
+
 
 
