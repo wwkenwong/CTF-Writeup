@@ -12,7 +12,9 @@
 
 呢題係google題,只要你中一個shellcode, 就get flag
 
-``pyrhon
+Checksec:
+
+```pyrhon
     Arch:     amd64-64-little
     RELRO:    Partial RELRO
     Stack:    No canary found
@@ -35,6 +37,11 @@ IO dump:
 ````
 
 
+呢題冇開nx, 可以run shellcode,
+
+check 0x7fffffffe070係指去乜地方先
+
+
 stack dump
 ```
 ──────────────────────────────────────── Stack ────────────────────────────────────────
@@ -43,6 +50,19 @@ stack dump
 
 
 ```
+
+原來係指去input buffer address -_-
+
+exploit就係:shellcode+padding+input buffer address
+
+padding='\x90'*(40-len(shellcode))
+
+其中40係buffersize+RBP 
+
+作為一個小薯,之後嘅動作當然係上shellstorm 抄shellcode
+
+大概copy and paste 左10條shellcode左右就get shell,亦都係呢條題目嘅難點
+
 
 
 
