@@ -9,7 +9,7 @@
 >[tablez](tablez)
 
 
-呢題係今次嘅嘅sanity check, 其實唔難
+呢題係今次CTF嘅sanity check, 其實唔難
 
 IDA Pro main:
 
