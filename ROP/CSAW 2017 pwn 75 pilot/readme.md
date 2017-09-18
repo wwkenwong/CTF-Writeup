@@ -7,6 +7,33 @@
 >                                 Can I take your order?
 >                                 nc pwn.chal.csaw.io 8464
 >                               16:05 Eastern: Updated binary
->                                       [pilot](pilot)
+
+>[pilot](pilot)
+
+呢題係google題,只要你中一個shellcode, 就get flag
+
+IO dump:
+
+```
+[*]Welcome DropShip Pilot...
+[*]I am your assitant A.I....
+[*]I will be guiding you through the tutorial....
+[*]As a first step, lets learn how to land at the designated location....
+[*]Your mission is to lead the dropship to the right location and execute sequence of instructions to save Marines & Medics...
+[*]Good Luck Pilot!....
+[*]Location:0x7fffffffe070
+[*]Command:aaaaaaaaaaa
+
+````
+
+
+stack dump
+```
+──────────────────────────────────────── Stack ────────────────────────────────────────
+0000| 0x7fffffffe070 ('a' <repeats 11 times>, "\n")
+0008| 0x7fffffffe078 --> 0xa616161 ('aaa\n')
+
+
+```
 
 
