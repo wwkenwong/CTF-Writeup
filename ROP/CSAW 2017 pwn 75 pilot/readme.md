@@ -61,7 +61,7 @@ padding='\x90'*(40-len(shellcode))
 
 作為一個小薯,之後嘅動作當然係上shellstorm 抄shellcode
 
-大概copy and paste 左10條shellcode左右就get shell,亦都係呢條題目嘅難點
+大概copy and paste 左10條shellcode左右就get shell,亦都係呢條題目嘅難點 =_=
 
 
 
