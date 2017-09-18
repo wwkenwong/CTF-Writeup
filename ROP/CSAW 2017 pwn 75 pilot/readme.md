@@ -1,4 +1,4 @@
-# CSAW 2017 rev 75 pilot
+# CSAW 2017 pwn 75 pilot
 
 # 題目:
 
