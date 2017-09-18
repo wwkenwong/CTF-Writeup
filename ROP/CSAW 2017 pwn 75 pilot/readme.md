@@ -63,6 +63,9 @@ padding='\x90'*(40-len(shellcode))
 
 大概copy and paste 左10條shellcode左右就get shell,亦都係呢條題目嘅難點 =_=
 
+```
+flag: flag{1nput_c00rd1nat3s_Strap_y0urse1v3s_1n_b0ys}
 
+```
 
 
