@@ -75,6 +75,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 26.http://brieflyx.me/
 
+27. 栈溢出之利用__stack_chk_fail http://yunnigu.dropsec.xyz/2017/03/04/%E6%A0%88%E6%BA%A2%E5%87%BA%E4%B9%8B%E5%88%A9%E7%94%A8-stack-chk-fail/
+
+28.堆溢出之unlink的利用-1 http://yunnigu.dropsec.xyz/2017/04/05/%E5%A0%86%E6%BA%A2%E5%87%BA%E4%B9%8Bunlink%E7%9A%84%E5%88%A9%E7%94%A8-1/
 
 Reverse
 ======================
