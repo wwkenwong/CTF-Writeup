@@ -75,9 +75,16 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 26.http://brieflyx.me/
 
+
 27. 栈溢出之利用__stack_chk_fail http://yunnigu.dropsec.xyz/2017/03/04/%E6%A0%88%E6%BA%A2%E5%87%BA%E4%B9%8B%E5%88%A9%E7%94%A8-stack-chk-fail/
 
+
 28.堆溢出之unlink的利用-1 http://yunnigu.dropsec.xyz/2017/04/05/%E5%A0%86%E6%BA%A2%E5%87%BA%E4%B9%8Bunlink%E7%9A%84%E5%88%A9%E7%94%A8-1/
+
+29.ShiftCrops つれづれなる備忘録 http://shift-crops.hatenablog.com
+
+30.https://sites.google.com/site/bletchleypark2/malware-analysis
+
 
 Reverse
 ======================
@@ -147,3 +154,15 @@ Online Course Materials
 12.https://cryptopals.com/
 
 13.【CTF 攻略】CTF比赛中关于zip的总结  http://bobao.360.cn/ctf/learning/203.html
+
+14. https://people.eecs.berkeley.edu/~daw/teaching/cs261-f11/schedule.html
+
+15.http://inst.eecs.berkeley.edu/~cs261/fa17/
+
+16.https://www.ece.cmu.edu/~ece732/gentable.php
+
+17.https://users.ece.cmu.edu/~dbrumley/courses/18487-f13/
+
+18. http://www.cs.cmu.edu/~fp/courses/15411-f13/schedule.html
+
+19. https://users.ece.cmu.edu/~dbrumley/courses/18487-f15/#lectures
