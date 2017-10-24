@@ -85,6 +85,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 30.https://sites.google.com/site/bletchleypark2/malware-analysis
 
+31.https://0x00sec.org/ The Home of the Hacker
+
+32.http://blackbunny.io/x64-sigreturn-oriented-programming/
 
 Reverse
 ======================
