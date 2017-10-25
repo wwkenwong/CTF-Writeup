@@ -16,6 +16,8 @@ x86-X64
 
 4.http://www.opensecuritytraining.info/IntroX86.html
 
+5.ELF file  https://www.cs.stevens.edu/~jschauma/810/elf.html
+
 
 PWN
 ======================
@@ -88,6 +90,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 31.https://0x00sec.org/ The Home of the Hacker
 
 32.http://blackbunny.io/x64-sigreturn-oriented-programming/
+
+33.http://charo-it.hatenablog.jp
 
 Reverse
 ======================
