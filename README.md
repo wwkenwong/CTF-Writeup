@@ -95,6 +95,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 34.http://0xshare.me/33c3_ptmalloc()源代码,.html
 
+35.http://d0m021ng.github.io/2016/11/03/PWN/ret2-dl-resolve-payload-构造原理（一）/
+
 Reverse
 ======================
 
