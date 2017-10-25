@@ -93,6 +93,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 33.http://charo-it.hatenablog.jp
 
+34.http://0xshare.me/33c3_ptmalloc()源代码,.html
+
 Reverse
 ======================
 
