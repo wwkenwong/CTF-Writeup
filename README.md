@@ -97,6 +97,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 35.http://d0m021ng.github.io/2016/11/03/PWN/ret2-dl-resolve-payload-构造原理（一）/
 
+36.http://uaf.io
+
 Reverse
 ======================
 
