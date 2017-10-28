@@ -118,6 +118,8 @@ Reverse
 
 8.https://www.52pojie.cn/thread-40995-1-1.html
 
+9.恶意样本分析手册 blog.nsfocus.net/malware-sample-analysis-summary/
+
 
 Infrastructure
 ========================
