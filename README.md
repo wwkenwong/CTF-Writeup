@@ -99,6 +99,10 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 36.http://uaf.io
 
+37.http://aptx4869.me/ctf/2017/03/31/learnPwn.html
+
+38.https://ctf-wiki.github.io/ctf-wiki/pwn/stackoverflow/advanced_rop.html#ret2vdso
+
 Reverse
 ======================
 
