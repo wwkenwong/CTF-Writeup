@@ -18,6 +18,8 @@ x86-X64
 
 5.ELF file  https://www.cs.stevens.edu/~jschauma/810/elf.html
 
+6.https://stackoverflow.com/questions/10448254/how-to-use-gdb-with-ld-preload
+
 
 PWN
 ======================
