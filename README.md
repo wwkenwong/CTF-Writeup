@@ -20,6 +20,7 @@ x86-X64
 
 6.https://stackoverflow.com/questions/10448254/how-to-use-gdb-with-ld-preload
 
+7.http://man7.org/tlpi/code/online/dist/procexec/system.c.html#system
 
 PWN
 ======================
