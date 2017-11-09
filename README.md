@@ -106,6 +106,8 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 38.https://ctf-wiki.github.io/ctf-wiki/pwn/stackoverflow/advanced_rop.html#ret2vdso
 
+39.http://blog.dazzlepppp.cn/2017/02/04/FSOP以及glibc针对其所做的防御措施/
+
 Reverse
 ======================
 
