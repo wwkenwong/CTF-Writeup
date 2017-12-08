@@ -108,6 +108,10 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 39.http://blog.dazzlepppp.cn/2017/02/04/FSOP以及glibc针对其所做的防御措施/
 
+40.http://www.cnblogs.com/Ox9A82/p/5865420.html Linux下fastbin利用小结——fd覆盖与任意地址free(House of Spirit)
+
+41.http://www.evil0x.com/posts/19226.html 通过ELF动态装载构造ROP链 （ Return-to-dl-resolve）
+
 Reverse
 ======================
 
