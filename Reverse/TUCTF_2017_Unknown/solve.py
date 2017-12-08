@@ -24,8 +24,7 @@ for i in range(0,56) :
 		listflag[i] = j
 		gdb.execute('run '+''.join(listflag))
 		print("trying: "+j)
-		#read the boolean value
-		#If it's different in your case : dump $esp+0x1b upon breaking on the previous breakpoin
+		
 		tmp = continue_num
 		while tmp > 0 :
 			gdb.execute('c')
