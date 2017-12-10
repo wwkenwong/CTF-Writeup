@@ -5,6 +5,10 @@
 
 Practice CTF List  captf.com/practice-ctf/
 
+unknowncheats https://www.unknowncheats.me/forum/index.php
+
+multiplayer game hacking https://www.mpgh.net
+
 x86-X64
 ======================
 
