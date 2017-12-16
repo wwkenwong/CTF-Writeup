@@ -122,6 +122,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 41.http://www.evil0x.com/posts/19226.html 通过ELF动态装载构造ROP链 （ Return-to-dl-resolve）
 
+42.https://gbmaster.wordpress.com/
+
+
 Reverse
 ======================
 
