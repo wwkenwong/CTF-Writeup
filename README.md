@@ -9,6 +9,12 @@ unknowncheats https://www.unknowncheats.me/forum/index.php
 
 multiplayer game hacking https://www.mpgh.net
 
+https://hackme.inndy.tw/scoreboard/
+
+https://paper.seebug.org
+
+https://paper.seebug.org/papers/Archive/refs/heap/
+
 x86-X64
 ======================
 
