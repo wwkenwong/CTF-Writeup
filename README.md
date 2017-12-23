@@ -124,6 +124,9 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 
 42.https://gbmaster.wordpress.com/
 
+43.http://veritas501.space/2017/05/23/HITCON-training%20writeup/ HITCON-training writeup
+
+44.http://simp1e.leanote.com
 
 Reverse
 ======================
