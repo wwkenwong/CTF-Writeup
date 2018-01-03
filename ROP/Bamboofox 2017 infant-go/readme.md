@@ -58,11 +58,15 @@ infant-gogogo: BAMBOOFOX{G0LaNg_iS_aw3s0m3ls!}
 infant-gotoheaven : BAMBOOFOX{GOLANG_PWnnnnnnnIng_iS_r3A11Y_W3iRdO_O}
 
 ```
+# Remark
+如果ida pro F5唔到,可以試下 Option->Compiler sizeof(int)=4
+
 
 # Reference
 
 1. http://shift-crops.hatenablog.com/entry/2017/12/09/200440
 
+2. https://bbs.pediy.com/thread-223281.htm
 
 
 
