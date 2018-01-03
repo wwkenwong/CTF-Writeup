@@ -1,5 +1,5 @@
 # Bamboofox 2017 infant-gogogo & infant-gotoheaven
-===================
+
 
 兩條基本嘅buffer overflow with ROP不過係用golang compile, 算係1 set 向Seccon 2017 babystack致敬嘅題目
 
@@ -42,6 +42,8 @@ payload+=p64(rdx)+p64(0x8)+p64(pop_rax_ret)+p64(0)+p64(syscall)
 # Solution :
 
 [infant-gogogo](infant-gogogo.py)
+
+
 [infant-gotoheaven](infant-gotoheaven.py)
 
 
