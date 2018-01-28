@@ -12,11 +12,9 @@
 
 撞一個鐘就可以get shell
 
-'''
-
+```
 flag: INS{did_you_gets_here_by_chance?}
-
-'''
+```
 
 
 # Intended Solution
