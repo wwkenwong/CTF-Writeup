@@ -7,7 +7,7 @@ Super Marimo - 375pts (Pwn)
 
 nc ch41l3ng3s.codegate.kr 3333
 
-Download(7ae39f9f3910ac6928dffc35a2b25548)
+[Download](7ae39f9f3910ac6928dffc35a2b25548)
 
 
 ```
@@ -106,7 +106,7 @@ GDB view:
 
 只要我地有一個crafted "valid" heap structure ,fake 到edit 以為 char *profile  個個位支pointer 係一支"valid" pointer,就可以有arbitary write
 
-咁可以邊? puts->one_gadget_rce
+咁可以write邊? puts->one_gadget_rce->get shell
 
 
-solution: solve.py(solve.py)
+solution: [solve.py](solve.py)
