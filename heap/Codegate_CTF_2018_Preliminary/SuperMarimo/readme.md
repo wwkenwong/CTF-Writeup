@@ -67,6 +67,8 @@ Bug就係呢到,個modifiy冇做bound checking ,搞到可以input >0x20 char 入
 望下個heapview先 (我已經加左(AAAA,BBBB),(CCCC,DDDD) marimo入去)
 
 
+![alt text](cg1.png)
+
 
 
 
@@ -81,12 +83,13 @@ struct marimo {
 
 
 ```
+
 overflowed heap:
 
+![alt text](cg2.png)
 
 
 哈 又真係overflow到喎
-
 
 
 
@@ -95,10 +98,15 @@ view 1又會炒
 GDB view:
 
 
+![alt text](cg3.png)
+
+
 
 # Exploit
 
 只要我地有一個crafted "valid" heap structure ,fake 到edit 以為 char *profile  個個位支pointer 係一支"valid" pointer,就可以有arbitary write
+
+咁可以邊? puts->one_gadget_rce
 
 
 solution: solve.py(solve.py)
