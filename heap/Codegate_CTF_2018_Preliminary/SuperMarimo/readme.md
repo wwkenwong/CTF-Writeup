@@ -111,15 +111,17 @@ GDB view:
 solution: [solve.py](solve.py)
 
 
-> [*] Paused (press any to continue)
-> leaked libcbase =0x7f1cf459c000
-> leaked malloc =0x7f1cf4620130
-> leaked one =0x7f1cf45e1216
-> [*] Switching to interactive mode
-> $ ls
-> flag
-> marimo
-> $ cat flag
-> But_every_cat_is_more_cute_than_Marimo
-> $  
+```
+[*] Paused (press any to continue)
+leaked libcbase =0x7f1cf459c000
+leaked malloc =0x7f1cf4620130
+leaked one =0x7f1cf45e1216
+[*] Switching to interactive mode
+$ ls
+flag
+marimo
+$ cat flag
+But_every_cat_is_more_cute_than_Marimo
+$  
 
+```
