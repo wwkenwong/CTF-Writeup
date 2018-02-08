@@ -35,6 +35,15 @@ uid=0(root) gid=0(root) groups=0(root)
 $  
 
 ```
+shifted fake chunk:
+
+![alt text](1.png)
+
+
+original position: 
+
+![alt text](2.png)
+
 
 # Reference
 
