@@ -47,3 +47,10 @@ original position:
 
 # Reference
 
+1. http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html
+
+2. https://github.com/shellphish/how2heap/blob/master/fastbin_dup_into_stack.c
+
+3. https://poning.me/2017/03/24/baby-heap-2017/
+
+4. http://0x48.pw/2017/08/01/0x36/
