@@ -15,6 +15,11 @@ https://paper.seebug.org
 
 https://paper.seebug.org/papers/Archive/refs/heap/
 
+http://www.woodmann.com
+
+http://www.openrce.org/articles/
+
+
 x86-X64
 ======================
 
@@ -129,6 +134,10 @@ http://security.cs.rpi.edu/courses/binexp-spring2015/
 44.http://simp1e.leanote.com
 
 45. https://poning.me/
+
+46.Universal ROP Gadgets https://www.slideshare.net/inaz2/rop-illmatic-exploring-universal-rop-on-glibc-x8664-en-41595384
+
+http://v0ids3curity.blogspot.hk/2013/07/some-gadget-sequence-for-x8664-rop.html
 
 Reverse
 ======================
