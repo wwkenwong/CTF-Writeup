@@ -107,20 +107,6 @@ r.sendline("ls -al")
 r.interactive()
 ```
 
-Contest 個陣唔知點解local libc 會有size error, 於是加左個for loop 令個malloc_hook layout valid返...
-
-可能之前打錯左size 掛??
-
-
-
-```python
-#just to make the structure around main_arena "align"
-#to bypass the malloc checking
-#for i in range(1,11):
-#    create("QQQQ",0x10*i)
-
-````
-
 # Solution
 
 
