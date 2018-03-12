@@ -121,6 +121,9 @@ Contest 個陣唔知點解local libc 會有size error, 於是加左個for loop �
 
 ````
 
+# Solution
+
+
 solution: [solve.py](solve.py)
 
 ```
