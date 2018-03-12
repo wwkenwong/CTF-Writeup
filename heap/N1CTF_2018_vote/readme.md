@@ -7,6 +7,7 @@
 >cn node: nc 47.97.190.1 6000
 >
 >(Two challenge servers are identical, use either of them.)
+>
 >[Download](b8a4590d-9fee-4a34-8396-d63adac62a0d.zip)
 
 
@@ -108,7 +109,8 @@ r.interactive()
 
 Contest 個陣唔知點解local libc 會有size error, 於是加左個for loop 令個malloc_hook layout valid返...
 
-可能之前打錯size 掛??
+可能之前打錯左size 掛??
+
 
 
 ```python
