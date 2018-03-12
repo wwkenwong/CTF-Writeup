@@ -84,11 +84,11 @@ void sub_40109D()
 不過由於冇得直接edit, 所以有好多error chk 要bypass .....
 
 
-當leak完 libc, triger consolidation之後, malloc 一個大少少嘅chunk 覆蓋晒之前個d chunk 嘅address
+當leak完 libc, trigger consolidation之後, malloc 一個大少少嘅chunk 覆蓋晒之前個d chunk 嘅address
 
 之後再寫假嘅meta data 去上一手memory address 相應嘅位置 (error chk bypass eg 前後位size 要match  )
 
-再free 返chunk 0 防止再malloc 個陣triger heap inside freed heap error 
+再free 返chunk 0 防止再malloc 個陣trigger heap inside freed heap error 
 
 
 
