@@ -58,13 +58,6 @@ main=0x00000000004009a7
 context.arch='amd64'
 
 flag=""
-def ans(chal):
-    gg = ''.join(chr(i) for i in range(256))
-    while True:
-        sol = ''.join(random.choice(gg) for _ in xrange(4))
-        if sha256(chal + sol).hexdigest().startswith('00000'):
-            return sol
-
 
 def ans1(chal):
     flag=1
