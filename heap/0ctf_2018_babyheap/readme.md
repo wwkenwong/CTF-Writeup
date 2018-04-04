@@ -28,6 +28,63 @@ Command:
 
 vulnerability:
 
+```C
+{
+    printf("Size: ");
+    LODWORD(v1) = sub_140A();
+    v4 = v1;
+    if ( (signed int)v1 > 0 )
+    {
+      v1 = *(_QWORD *)(24LL * v3 + a1 + 8) + 1LL;
+      if ( v4 <= v1 )
+      {
+        printf("Content: ");
+        sub_1230(*(_QWORD *)(24LL * v3 + a1 + 16), v4);
+        LODWORD(v1) = printf("Chunk %d Updated\n", (unsigned int)v3);
+      }
+    }
+    
+  ```
+  
+係update function個到, input content會比input size讀多左1 byte 入去heap到,一個好明顯嘅 off by one bug
+  
+我地可以用個個 byte shrink 或者extend個 chunk
+
+不過呢題有一個constraint,最多只可以calloc到 0x60 chunk(fast bin),而且call calloc會將舊content 清0
+
+所以無得靠直接free unsorted bin leak libc/heap address
+
+```C
+
+  for ( i = 0; i <= 15; ++i )
+  {
+    if ( !*(_DWORD *)(24LL * i + a1) )
+    {
+      printf("Size: ");
+      v2 = sub_140A();
+      if ( v2 > 0 )
+      {
+        if ( v2 > 0x58 )
+          v2 = 0x58;
+        v3 = calloc(v2, 1uLL);
+        if ( !v3 )
+          exit(-1);
+        *(_DWORD *)(24LL * i + a1) = 1;
+        *(_QWORD *)(a1 + 24LL * i + 8) = v2;
+        *(_QWORD *)(a1 + 24LL * i + 16) = v3;
+        printf("Chunk %d Allocated\n", (unsigned int)i);
+      }
+      return;
+    }
+  }
+}
+```
+
+係呢個情況下我地靠update n th chunk,用off by one overwrite下一個chunk(n+1 th chunk)嘅size, 再free下一個chunk(n+1 th chunk)
+
+咁就可以將n+1 th chunk 放入unsorted bin, 之後再view n th chunk leak libc
+
+leak heap address 可以用上面方法放多一個chunk入unsorted bin,再view 或者create一個k size fastbin,free左佢,再靠 off by one, extend一組 chunk, corrupt 包左嘅一個chunk做k size, 由於fastbin係 single linked list所以 leak到 heap address
 
 
 
