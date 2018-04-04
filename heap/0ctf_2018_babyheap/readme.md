@@ -26,7 +26,7 @@ Command:
 
 呢條係經典嘅heap題目,有齊 allocate, update, delete, view
 
-vulnerability:
+# vulnerability:
 
 ```C
 {
@@ -79,6 +79,7 @@ vulnerability:
   }
 }
 ```
+# Leak Information
 
 係呢個情況下我地靠update n th chunk,用off by one overwrite下一個chunk(n+1 th chunk)嘅size, 再free下一個chunk(n+1 th chunk)
 
@@ -86,7 +87,17 @@ vulnerability:
 
 leak heap address 可以用上面方法放多一個chunk入unsorted bin,再view 或者create一個k size fastbin,free左佢,再靠 off by one, extend一組 chunk, corrupt 包左嘅一個chunk做k size, 由於fastbin係 single linked list所以 leak到 heap address
 
+# Exploit
 
+我地可以free某個包住左嘅chunk 做 fastbin attack
+
+你以為你已經get shell?? 少年你太年輕了
+
+因為最大只可以calloc 0x60 chunk, 而要 bypass fast bin checking, calloc 去_malloc_hook附近位置,需要 calloc到 0x70 chunk
+
+最後發現,如果heap address 開頭係0x56,我地可以靠calloc 0x60 chunk 去到main_arena紀錄current top address附近嘅位置
+
+所以我地用fastbin attack,calloc 去main_arena+offset,edit top 做_malloc_hook附近位置,再做幾次calloc clean返之前d位,最後我地拎到 _malloc_hook,再 overwrite _malloc_hook->one gadget rce,call calloc->get shell
 
 # Flag
 
