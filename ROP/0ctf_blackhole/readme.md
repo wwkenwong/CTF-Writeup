@@ -58,3 +58,10 @@ gadget 主要都係用 csu gadget (universal gadget)
 [solve.py](solve.py)
 
 
+# FLAG
+
+"""
+flag{even_black_holes_leak_information_by_Hawking_radiation}
+"""
+
+Again,in memory of Stephen William Hawking.
