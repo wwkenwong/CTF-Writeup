@@ -99,11 +99,14 @@ leak heap address 可以用上面方法放多一個chunk入unsorted bin,再view 
 
 所以我地用fastbin attack,calloc 去main_arena+offset,edit top 做_malloc_hook附近位置,再做幾次calloc clean返之前d位,最後我地拎到 _malloc_hook,再 overwrite _malloc_hook->one gadget rce,call calloc->get shell
 
+[solve.py](solve.py)
+
 # Flag
 
 ```
 flag{have_fun_with_fastbin}
 ```
+
 
 logs:
 ```
