@@ -160,6 +160,7 @@ Reverse
 
 9.恶意样本分析手册 blog.nsfocus.net/malware-sample-analysis-summary/
 
+10. https://blog.superponible.com/2017/04/15/emulating-assembly-in-radare2/
 
 Infrastructure
 ========================
