@@ -1,6 +1,6 @@
 import angr
 proj = angr.Project('./patched_bin', auto_load_libs=False)
-target=[0x804b3f6]
+target=[0x804a6fc]
 avoid=[0x804aa08]
 st = proj.factory.entry_state()
 
