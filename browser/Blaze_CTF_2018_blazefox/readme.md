@@ -139,7 +139,7 @@ Basically, if we call .blaze() to any array object, it will change the array to 
 
 Triggering the vulnerability : 
 
-[1.png]
+![alt text](1.png)
 
 # 2. Exploit development
 
@@ -159,18 +159,18 @@ for(var i=0; i<0x2000; i=i+1) {uint32_Array[i]=0x4141414141}
 oob_Array.blaze()
 ```
 
-[2.png]
+![alt text](2.png)
 
 Basically the 0xfff88000 in front of 0x71717171 are type indicator of 0x71717171
 
 lets find where are the "A" located in the memory.
 
 
-[3.png]
+![alt text](3.png)
 
 We can observe the memory structure of the oob_Array as follows (details plz read bpsec's blog post):
 
-[2_labelled.png]
+![alt text](2_labelled.png)
 
 The 0x2000 on the memory is the size of our array object.
 
@@ -190,7 +190,7 @@ for (i=0; i<0x2000; i++)
 }
 ```
 
-[4.png]
+![alt text](4.png)
 
 Next step is to leak out some pointer to calculate the offset 
 
@@ -198,7 +198,7 @@ This time since we are using the js engine, it didn't compiled with PIE , we can
 
 To leak the code base, in this chal, we can leak the <emptyElementsHeader+16> , which located closely to our oob array
 
-[5.png]
+![alt text](5.png)
 
 After some calculation we obtained the location of the GOT on the program. 
 
@@ -270,7 +270,7 @@ target.copyWithin(0,1)
 
 PWNED :)
 
-[6.png]
+![alt text](6.png)
 
 
 remark : the offset of the system function is found from the system libc 
