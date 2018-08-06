@@ -170,6 +170,7 @@ lets find where are the "A" located in the memory.
 
 We can observe the memory structure of the oob_Array as follows (details plz read bpsec's blog post):
 
+[2_labelled.png]
 
 The 0x2000 on the memory is the size of our array object.
 
@@ -196,6 +197,8 @@ Next step is to leak out some pointer to calculate the offset
 This time since we are using the js engine, it didn't compiled with PIE , we can directly use pwntools or IDA PRO to obtain the address of the GOT, if we are attack the real firefox browser, we need to find the code base.
 
 To leak the code base, in this chal, we can leak the <emptyElementsHeader+16> , which located closely to our oob array
+
+[5.png]
 
 After some calculation we obtained the location of the GOT on the program. 
 
@@ -265,7 +268,14 @@ target.copyWithin(0,1)
 
 ```
 
-remark : the offset of the system function is called from the system libc 
+PWNED :)
+
+[6.png]
+
+
+remark : the offset of the system function is found from the system libc 
+
+
 
 # Reference
 
