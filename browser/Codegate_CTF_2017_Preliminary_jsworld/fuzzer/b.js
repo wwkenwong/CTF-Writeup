@@ -1,0 +1,2 @@
+]), shellcode);
+ss(1);
