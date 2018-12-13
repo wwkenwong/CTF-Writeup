@@ -21,15 +21,19 @@ We can leak the jit address by place it inside a {}, since object inside would b
 ![alt text](3.png)
 
 check under vmmap, we can see what we need is not within the rwx jit region:
+
 ![alt text](4.png)
 
-Locate to it, we saw there is a pointer belongs to the rwx region
+Locate to it, we saw there is a pointer belongs to the rwx region  (red box): 
+
 ![alt text](5.png)
 
 Locate that pointer , we saw something looks like instructions (red box):
+
 ![alt text](6.png)
 
 We can trigger sigtrap by overwriting it with 0xcc:
+
 ![alt text](7.png)
 
 
