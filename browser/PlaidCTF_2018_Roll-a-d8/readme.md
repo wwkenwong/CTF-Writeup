@@ -20,7 +20,7 @@ We can leak the jit address by place it inside a {}, since object inside would b
 
 ![alt text](3.png)
 
-check under vmmap, we can see what we need is not within the rwx jit region:
+check under vmmap, we can see what we got is not within the rwx jit region:
 
 ![alt text](4.png)
 
