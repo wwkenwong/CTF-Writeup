@@ -16,9 +16,25 @@ After triggering the bug , we can leak the address of the array buffer with the 
 The buffer address is highlighted in red,while yellow box if pointed to oobArray :
 ![alt text](2.png)
 
+We can leak the jit address by place it inside a {}, since object inside would be align each other within the memory region
 
-vmmap:
+![alt text](3.png)
+
+check under vmmap, we can see what we need is not within the rwx jit region:
 ![alt text](4.png)
+
+Locate to it, we saw there is a pointer belongs to the rwx region
+![alt text](5.png)
+
+Locate that pointer , we saw something looks like instructions (red box):
+![alt text](6.png)
+
+We can trigger sigtrap by overwriting it with 0xcc:
+![alt text](7.png)
+
+
+Poped a xcalc :)
+![alt text](8.png)
 
 
 # Reference and other exploits
