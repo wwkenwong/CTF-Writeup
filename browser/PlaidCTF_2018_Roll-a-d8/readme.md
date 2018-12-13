@@ -8,13 +8,17 @@ This might only be helpful to Google employees... or is it? https://crbug.com/82
 
 We can search for the regression test under v8 's repo, but we need to slightly modify the test before really can trigger crashes
 
+You have to modify the maxsize (increase) before triggering the crash on the d8 engine with the regression test 
 
-After triggering the bug , we can leak the address of the array buffer :
+After triggering the bug , we can leak the address of the array buffer with the help of the oobArray :
 ![alt text](1.png)
 
 The buffer address is highlighted in red,while yellow box if pointed to oobArray :
-
 ![alt text](2.png)
+
+
+vmmap:
+![alt text](4.png)
 
 
 # Reference and other exploits
