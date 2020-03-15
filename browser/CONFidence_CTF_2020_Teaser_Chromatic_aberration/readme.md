@@ -23,3 +23,17 @@ For people having problems with the above link, try this ones
 ```
 
 
+
+
+Brief doc on new 32 bit pointer compression
+
+Update later 
+
+
+
+Exploit with [pwn_with_logs.js](pwn_with_logs.js) will crash due to weird GC issues 	
+
+
+
+
+
