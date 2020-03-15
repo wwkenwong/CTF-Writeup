@@ -1,4 +1,4 @@
-# CONFidence CTF 2020 Teaser Chromaticaberration
+# CONFidence CTF 2020 Teaser Chromatic aberration
 
 
 ```
