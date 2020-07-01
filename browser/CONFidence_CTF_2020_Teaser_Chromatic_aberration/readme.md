@@ -115,7 +115,7 @@ for (var i = 0; i < 0x200; i++){
 Our exploitation technique is simple, we will corrupt the backing store of the ArrayBuffer and point it to anywhere in the memory
 ![alt text](2.jpg)
 
-However, from the deployed pointer compression [1](https://blog.exodusintel.com/2020/02/24/a-eulogy-for-patch-gapping-chrome/), we cannot leak address directly
+However, from the deployed pointer compression [[1](https://blog.exodusintel.com/2020/02/24/a-eulogy-for-patch-gapping-chrome/)] ,[[2](https://docs.google.com/document/d/10qh2-b4C5OtSg-xLwyZpEI5ZihVBPtn1xwKBbQC26yI)], we cannot leak address directly
 
 So, we will need to leak the upper part of the address 
 
