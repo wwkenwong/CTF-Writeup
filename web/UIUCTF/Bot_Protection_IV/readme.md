@@ -191,7 +191,7 @@ VJGJJ :
 
 ![alt text](VJGJJ.png)
 
-3. In fact ,most of cases I solve manually the edit distance is between 1-2 characters and the problematic region are share by different models ... 
+3. In fact ,most of cases I solve manually the edit distance is between 1-2 characters and the problematic region are share by different models... 
 
 For example PTJYZ : 
 
