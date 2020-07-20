@@ -118,11 +118,11 @@ The best result with 8 models :
 
 For 5 models to 8 models ensemble , we improve from solving 40 level before fail to average solving 60 level. However, it still very far away from solving 500 within 10 minutes.
 
-At the end, my god like teammate [@samueltangz613](https://twitter.com/samueltangz613) come up with an idea to solve as a hybird approach (DL model + human)...
+At the end, my god like teammate [@samueltangz613](https://twitter.com/samueltangz613) come up with an idea to solve as a hybrid approach (DL model + human)...
 
-If a captcha can't be solve with 8 of my models, it will solve by myself .... 
+If a captcha can't be solve with 8 of my models, it will solve by myself.... 
 
-After 3 trials(once timeout at 495 lv, once at 365 lv), we succesfully capture the flag with ~90 second left by luck (manually solved ~10 times in total).... 
+After 3 trials(once timeout at 495 lv, once at 365 lv), we successfully capture the flag with ~90 second left by luck (manually solved ~10 times in total).... 
 
 
 ![alt text](solved.jpg)
@@ -207,4 +207,3 @@ Option available :
 
 
 T⍑ᔑリꖌᓭ ⎓𝙹∷ ∷ᒷᔑ↸╎リ⊣ ⚍リℸ ̣ ╎ꖎ ⍑ᒷ∷ᒷ :) 
-
