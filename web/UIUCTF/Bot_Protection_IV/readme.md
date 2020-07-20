@@ -1,5 +1,7 @@
 # UIUCTF 2020 Web 500 Bot Protection IV
 
+Question : 
+
 ```
 Challenge
 4 Solves
@@ -148,6 +150,8 @@ IndexError: list index out of range
 ```
 Flag : uiuctf{i_knew_a_guy_in_highschool_that_could_read_this}
 ```
+
+Since the model file(~500 MB), and extended dataset (~2GB) are too large, I will not upload here, however everything can reproduce easily if author release the captcha generator or made one by yourself base on the font ... 
 
 # Credit 
 
