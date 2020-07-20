@@ -99,7 +99,7 @@ Here, I think of [Ensemble Learning](https://en.wikipedia.org/wiki/Ensemble_lear
 
 ![alt text](ensemble_learning.jpg)
 
-The idea of Ensemble Learning is very simple. Assume we trained multiple classifer for the same classification problem, we create a classification base on multiple classifier to our input. We apply a similar concept here, but we hope any one of them could solve the captcha even the previous model fails to do. Originally, we think of bruteforce the top 2 decision of each char, but turns out it requires 32 query , which we may run out of time ... 
+The idea of Ensemble Learning is very simple. Assume we trained multiple classifier for the same classification problem, we create a classification base on multiple classifier to our input. We apply a similar concept here, but we hope any one of them could solve the captcha even the previous model fails to do. Originally, we think of bruteforce the top 2 decision of each char, but turns out it requires 32 query , which we may run out of time ... 
 
 To train up different models, I tried to play with the different parameters like batch size, size of evaluation set and different training set,etc. 
 
